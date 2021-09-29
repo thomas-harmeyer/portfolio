@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thomas-harmeyer.github.io/portfolio",
   "dependencies": {
     "bootstrap": "^5.1.1",
     "bootswatch": "^5.1.1",
