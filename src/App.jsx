@@ -13,10 +13,10 @@ function App() {
         <TopBar />
         <Container fluid className="">
           <Switch>
-            <Route path="portfolio/home">
+            <Route path="home">
               <Home />
             </Route>
-            <Route path="portfolio/about">
+            <Route path="about">
               <About />
             </Route>
           </Switch>
