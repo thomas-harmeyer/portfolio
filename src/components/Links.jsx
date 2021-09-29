@@ -1,5 +1,5 @@
 const Links = {
-  Home: "/home",
+  Home: "/portfolio/home",
   Projects: "/projects",
   Algorithms: {
     DFS: "/algorithms/dfs",
