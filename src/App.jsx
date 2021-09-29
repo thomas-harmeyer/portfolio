@@ -1,14 +1,14 @@
 import "./App.css";
 import About from "./components/Projects";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Switch, Route } from "react-router-dom";
 import TopBar from "./components/TopBar";
 import Container from "react-bootstrap/esm/Container";
 import BottomBar from "./components/BottomBar";
 
 function App() {
   return (
-    <Router>
+    <HashRouter basename="/portfolio">
       <div>
         <TopBar />
         <Container fluid className="">
@@ -23,7 +23,7 @@ function App() {
         </Container>
         <BottomBar />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

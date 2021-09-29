@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.507747f0.chunk.css",
-    "main.js": "/portfolio/static/js/main.42eecd38.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.42eecd38.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.e7c0aeaa.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.e7c0aeaa.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.37da8305.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.37da8305.js.map",
     "static/css/2.5e943794.chunk.css": "/portfolio/static/css/2.5e943794.chunk.css",
-    "static/js/2.274e2caf.chunk.js": "/portfolio/static/js/2.274e2caf.chunk.js",
-    "static/js/2.274e2caf.chunk.js.map": "/portfolio/static/js/2.274e2caf.chunk.js.map",
+    "static/js/2.e58b236d.chunk.js": "/portfolio/static/js/2.e58b236d.chunk.js",
+    "static/js/2.e58b236d.chunk.js.map": "/portfolio/static/js/2.e58b236d.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.5e943794.chunk.css.map": "/portfolio/static/css/2.5e943794.chunk.css.map",
     "static/css/main.507747f0.chunk.css.map": "/portfolio/static/css/main.507747f0.chunk.css.map",
-    "static/js/2.274e2caf.chunk.js.LICENSE.txt": "/portfolio/static/js/2.274e2caf.chunk.js.LICENSE.txt",
+    "static/js/2.e58b236d.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e58b236d.chunk.js.LICENSE.txt",
     "static/media/CodeForcesLogo.313c4e55.png": "/portfolio/static/media/CodeForcesLogo.313c4e55.png",
     "static/media/GithubLogo.a7cb412d.png": "/portfolio/static/media/GithubLogo.a7cb412d.png",
     "static/media/IMG_0941.064e5d98.JPG": "/portfolio/static/media/IMG_0941.064e5d98.JPG",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.37da8305.js",
     "static/css/2.5e943794.chunk.css",
-    "static/js/2.274e2caf.chunk.js",
+    "static/js/2.e58b236d.chunk.js",
     "static/css/main.507747f0.chunk.css",
-    "static/js/main.42eecd38.chunk.js"
+    "static/js/main.e7c0aeaa.chunk.js"
   ]
 }
