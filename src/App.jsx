@@ -17,7 +17,7 @@ function App() {
         <TopBar />
         <Container fluid className="">
           <Switch>
-            <Route path="/home">
+            <Route path="/">
               <Home />
             </Route>
             <Route path="/about">
