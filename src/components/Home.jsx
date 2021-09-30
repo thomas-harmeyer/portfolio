@@ -10,8 +10,8 @@ import Image from "react-bootstrap/Image";
 
 const Home = () => {
   return (
-    <Container className="p-5 justify-content-md-center">
-      <Row className="p-5">
+    <Container className="p-1 justify-content-md-center">
+      <Row className="p-1">
         <Col sm={{ span: 6, offset: 3 }}>
           <Row>
             <Col>
@@ -26,11 +26,11 @@ const Home = () => {
         </Col>
       </Row>
       <hr />
-      <Row className="p-5 ">
-        <Col auto={6}>
+      <Row className="p-1 mb-1">
+        <Col auto>
           <Image fluid src={UCFLogo} />
         </Col>
-        <Col auto={6}>
+        <Col>
           <h3>
             I am a computer science major in my second year at the University of
             Central Florida. I have been on the programming team for two years
@@ -43,8 +43,8 @@ const Home = () => {
       </Row>
       <hr />
       <Row>
-        <Row className="p-5 ">
-          <Col auto={6}>
+        <Row className="p-1 mb-1">
+          <Col>
             <h3>
               Over the past summer I learned a ton of new, useful languages. I
               used a frontend react framework, also MongoDB and ExpressJS for
@@ -55,18 +55,18 @@ const Home = () => {
               Check my one of my projects on GitHub
             </Button>
           </Col>
-          <Col auto={6}>
+          <Col>
             <Image fluid src={GithubLogo} />
           </Col>
         </Row>
       </Row>{" "}
       <hr />
       <Row>
-        <Row className="p-5 ">
+        <Row className="mb-1 p-1 ">
           <Col auto={6}>
             <Image fluid src={CodeForcesLogo} />
           </Col>
-          <Col auto={6}>
+          <Col>
             <h3>
               I enjoy competitive programming so much I do it in my free time.
               CodeForces is a website that hosts competitive programming
