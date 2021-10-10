@@ -9,6 +9,7 @@ import {
 import TopBar from "./components/TopBar";
 import Container from "react-bootstrap/esm/Container";
 import BottomBar from "./components/BottomBar";
+import BFS from "./components/algorithms/BFS";
 
 function App() {
   return (
@@ -17,11 +18,14 @@ function App() {
         <TopBar />
         <Container fluid className="">
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/algorithms/bfs">
+              <BFS />
             </Route>
           </Switch>
         </Container>
