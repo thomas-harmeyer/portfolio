@@ -69,7 +69,7 @@ const BFS = () => {
 
   useEffect(() => {
     function addBlocks() {
-      for (let i = 0; i < n * 0.15; i++) {
+      for (let i = 0; i < n * 0.5; i++) {
         updateGraph(getRandomInt(n), -1);
       }
     }
