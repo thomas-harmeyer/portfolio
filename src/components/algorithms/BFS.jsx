@@ -6,7 +6,7 @@ const BFS = () => {
   const n = 12 * 12;
   const adj = useRef([...Array(n).fill(0)]); //0:unvisted, 1:visted,-1:blocked
   const numOfVistRef = useRef(0);
-  const [numOfVist, setNumOfVist] = useState(numOfVistRef - 1);
+  const [, setNumOfVist] = useState(numOfVistRef - 1);
   const keys = [...Array(n).keys()];
   const runBFS = (nodeIndex) => {
     let q = [];
@@ -89,9 +89,6 @@ const BFS = () => {
   }
   function getY(i) {
     return i / 12;
-  }
-  function getI(x, y) {
-    return x + y * n;
   }
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
