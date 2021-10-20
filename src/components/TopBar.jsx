@@ -13,18 +13,18 @@ const TopBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href={Links.Home}>About Me</Nav.Link>
-            <Nav.Link href="projects">Personal Projects</Nav.Link>
+            {/* <Nav.Link href="projects">Personal Projects</Nav.Link> */}
             <NavDropdown title="Algorithms" id="basic-nav-dropdown">
-              <NavDropdown.Item href={Links.Algorithms.BFS}>
+              {/* <NavDropdown.Item href={Links.Algorithms.BFS}>
                 DFS
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
               <NavDropdown.Item href={Links.Algorithms.BFS}>
                 BFS
               </NavDropdown.Item>
-              <NavDropdown.Divider></NavDropdown.Divider>
+              {/* <NavDropdown.Divider></NavDropdown.Divider>
               <NavDropdown.Item href={Links.Algorithms.Dijkstra}>
                 Dijkstra's
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

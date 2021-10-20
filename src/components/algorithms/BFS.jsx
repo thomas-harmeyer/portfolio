@@ -96,6 +96,12 @@ const BFS = () => {
 
   return (
     <Container className="p-3" style={{ height: "85vh" }}>
+      <Row>
+        <Col>
+          This is a BFS example I made in React. Click anywhere to see the a
+          visual representation of a BFS. More to come soon!
+        </Col>
+      </Row>
       <Row style={{ height: "100%" }}>{displayMap}</Row>
     </Container>
   );
