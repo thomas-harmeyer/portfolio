@@ -75,7 +75,7 @@ const BFS = () => {
   const displayMap = keys.map((i) => {
     return (
       <Col
-        sm={1}
+        xs={1}
         style={{
           background:
             graphState[i] === 0
