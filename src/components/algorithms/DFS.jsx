@@ -116,7 +116,7 @@ const BFS = () => {
       <Row>
         <Col>
           This is a DFS example I made in React. Click anywhere to see the a
-          visual representation of a BFS. More to come soon! (Works best on
+          visual representation of a DFS. More to come soon! (Works best on
           larger screens)
         </Col>
       </Row>
