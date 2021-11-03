@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 const BottomBar = () => {
   return (
     <footer>
-      <Navbar expand="sm" bg="dark" fixed="bottom" variant="dark">
+      <Navbar expand="sm" bg="dark" sticky="bottom" variant="dark">
         <Container className="justify-content-md-center">
           <Row>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
