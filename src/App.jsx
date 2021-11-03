@@ -10,7 +10,7 @@ import TopBar from "./components/TopBar";
 import Container from "react-bootstrap/esm/Container";
 import BottomBar from "./components/BottomBar";
 import BFS from "./components/algorithms/BFS";
-
+import DFS from "./components/algorithms/DFS";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +26,9 @@ function App() {
             </Route>
             <Route path="/algorithms/bfs">
               <BFS />
+            </Route>
+            <Route path="/algorithms/dfs">
+              <DFS />
             </Route>
           </Switch>
         </Container>

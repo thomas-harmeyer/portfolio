@@ -13,7 +13,7 @@ const BFS = () => {
   const difCol = [-1, 1, 0, 0];
 
   //state
-  const graph = useRef([...Array(n).fill(0)]); //0:unvisted, 1:visted,-1:blocked, 2:breath, 3:last
+  const graph = useRef([...Array(n).fill(0)]); //0:unvisted, 1:visted,-1:blocked, 2:last
   const vist = useRef([...Array(n).fill(0)]); //0:open, 1:not open
   const [graphState, setGraphState] = useState(graph.current.slice());
   const stack = useRef([]);
@@ -55,26 +55,19 @@ const BFS = () => {
     updateView();
   }, [n]);
 
-  const bfs = (start) => {
-    let queue = [start];
-    vist.current[getI(start.row, start.col)] = 1;
+  const dfs = (u) => {
+    vist.current[getI(u.row, u.col)] = 1;
+    stack.current.push(getI(u.row, u.col));
 
-    while (queue.length > 0) {
-      let u = queue.shift();
-      stack.current.push(getI(u.row, u.col));
-
-      for (let i = 0; i < 4; i++) {
-        let v = JSON.parse(JSON.stringify(u)); //deep copy
-        v.row += difRow[i];
-        v.col += difCol[i];
-
-        if (
-          cordInBounds(v.row, v.col) &&
-          vist.current[getI(v.row, v.col)] === 0
-        ) {
-          queue.push(v);
-          vist.current[getI(v.row, v.col)] = 1;
-        }
+    for (let i = 0; i < 4; i++) {
+      let v = JSON.parse(JSON.stringify(u)); //deep copy
+      v.row += difRow[i];
+      v.col += difCol[i];
+      if (
+        cordInBounds(v.row, v.col) &&
+        vist.current[getI(v.row, v.col)] === 0
+      ) {
+        dfs(v);
       }
     }
   };
@@ -95,7 +88,7 @@ const BFS = () => {
         }}
         key={i + ":" + graphState[i][i]}
         className="p-1"
-        onClick={() => bfs({ row: getRow(i), col: getCol(i) })}
+        onClick={() => dfs({ row: getRow(i), col: getCol(i) })}
       ></Col>
     );
   });

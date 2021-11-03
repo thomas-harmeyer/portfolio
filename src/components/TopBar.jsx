@@ -15,9 +15,9 @@ const TopBar = () => {
             <Nav.Link href={Links.Home}>About Me</Nav.Link>
             {/* <Nav.Link href="projects">Personal Projects</Nav.Link> */}
             <NavDropdown title="Algorithms" id="basic-nav-dropdown">
-              {/* <NavDropdown.Item href={Links.Algorithms.BFS}>
+              <NavDropdown.Item href={Links.Algorithms.DFS}>
                 DFS
-              </NavDropdown.Item> */}
+              </NavDropdown.Item>
               <NavDropdown.Item href={Links.Algorithms.BFS}>
                 BFS
               </NavDropdown.Item>
