@@ -109,9 +109,6 @@ const BFS = () => {
   function getI(row, col) {
     return row * height + col;
   }
-  const iInBounds = (i) => {
-    return i >= 0 && i < n;
-  };
 
   const cordInBounds = (row, col) => {
     return row >= 0 && row < width && col >= 0 && col < height;
