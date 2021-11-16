@@ -36,8 +36,9 @@ const BFS = () => {
 
     const updateView = () => {
       console.log(stack.current);
-      if (stackIndex.current <= stack.current.length) {
+      if (stackIndex.current < stack.current.length) {
         if (stackIndex.current > 0) {
+          console.log(stackIndex.current - 1);
           stack.current[stackIndex.current - 1].forEach((i) => {
             graph.current[i] = 1;
           });
@@ -48,6 +49,14 @@ const BFS = () => {
           });
         }
         stackIndex.current++;
+      } else if (
+        stackIndex.current === stack.current.length &&
+        stackIndex.current > 0
+      ) {
+        //clean up last breath
+        stack.current[stackIndex.current - 1].forEach((i) => {
+          graph.current[i] = 1;
+        });
       } else if (stackIndex.current > 0) {
         graph.current[stack.current[stackIndex.current - 1]] = 1;
       }
@@ -60,11 +69,11 @@ const BFS = () => {
   }, [n]);
 
   const bfs = (start) => {
-    start.dist = stack.current.length;
+    start.dist = stackIndex.current;
     if (vist.current[getI(start.row, start.col)] === 1) return;
     let queue = [start];
     vist.current[getI(start.row, start.col)] = 1;
-    stack.current[start.dist] = [];
+    if (!stack.current[start.dist]) stack.current[start.dist] = [];
     stack.current[start.dist].push(getI(start.row, start.col));
     while (queue.length > 0) {
       let u = queue.shift();
