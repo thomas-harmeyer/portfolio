@@ -1,22 +1,16 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 const BottomBar = () => {
   return (
     <footer>
-      <Navbar expand="sm" bg="dark" sticky="bottom" variant="dark">
-        <Container className="justify-content-md-center">
-          <Row>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="">
-                <NavDropdown.Item>Thomas Harmeyer</NavDropdown.Item>
-                <NavDropdown.Item>thomasmharmeyer@gmail.com</NavDropdown.Item>
-                <NavDropdown.Item>262-444-2422</NavDropdown.Item>
-              </Nav>
-            </Navbar.Collapse>
+      <Navbar bg="dark" sticky="bottom" variant="dark">
+        <Container className="justify-content-md-center m-3">
+          <Row className="m-2">
+            <Col>Thomas Harmeyer</Col>
+            <Col>thomasmharmeyer@gmail.com</Col>
+            <Col>262-444-2422</Col>
           </Row>
         </Container>
       </Navbar>

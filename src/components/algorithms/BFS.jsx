@@ -35,38 +35,45 @@ const BFS = () => {
     };
 
     const updateView = () => {
-      console.log(stack.current.length + " " + stackIndex.current);
-      if (stackIndex.current < stack.current.length) {
+      console.log(stack.current);
+      if (stackIndex.current <= stack.current.length) {
         if (stackIndex.current > 0) {
-          graph.current[stack.current[stackIndex.current - 1]] = 1;
+          stack.current[stackIndex.current - 1].forEach((i) => {
+            graph.current[i] = 1;
+          });
         }
-        graph.current[stack.current[stackIndex.current]] = 2;
-        setGraphState(graph.current.slice());
+        if (stack.current[stackIndex.current]) {
+          stack.current[stackIndex.current].forEach((i) => {
+            graph.current[i] = 2;
+          });
+        }
         stackIndex.current++;
       } else if (stackIndex.current > 0) {
         graph.current[stack.current[stackIndex.current - 1]] = 1;
-        setGraphState(graph.current.slice());
       }
+      setGraphState(graph.current.slice());
       setTimeout(updateView, refreshRate);
     };
-
     addBlocks();
     setGraphState(graph.current.slice());
     updateView();
   }, [n]);
 
   const bfs = (start) => {
+    start.dist = stack.current.length;
+    if (vist.current[getI(start.row, start.col)] === 1) return;
     let queue = [start];
     vist.current[getI(start.row, start.col)] = 1;
-
+    stack.current[start.dist] = [];
+    stack.current[start.dist].push(getI(start.row, start.col));
     while (queue.length > 0) {
       let u = queue.shift();
-      stack.current.push(getI(u.row, u.col));
 
       for (let i = 0; i < 4; i++) {
         let v = JSON.parse(JSON.stringify(u)); //deep copy
         v.row += difRow[i];
         v.col += difCol[i];
+        v.dist++;
 
         if (
           cordInBounds(v.row, v.col) &&
@@ -74,6 +81,10 @@ const BFS = () => {
         ) {
           queue.push(v);
           vist.current[getI(v.row, v.col)] = 1;
+          if (stack.current[v.dist] === undefined) {
+            stack.current[v.dist] = [];
+          }
+          stack.current[v.dist].push(getI(v.row, v.col));
         }
       }
     }
@@ -94,17 +105,17 @@ const BFS = () => {
               : "purple",
         }}
         key={i + ":" + graphState[i][i]}
-        className="p-1"
-        onClick={() => bfs({ row: getRow(i), col: getCol(i) })}
+        className="p-0"
+        onClick={() => bfs({ row: getRow(i), col: getCol(i), dist: 0 })}
       ></Col>
     );
   });
 
   function getRow(i) {
-    return Math.floor(i / 12);
+    return Math.floor(i / width);
   }
   function getCol(i) {
-    return i % 12;
+    return i % width;
   }
   function getI(row, col) {
     return row * height + col;
@@ -119,16 +130,23 @@ const BFS = () => {
   }
 
   return (
-    <Container className="p-3" style={{ height: "85vh" }}>
-      <Row>
-        <Col>
-          This is a BFS example I made in React. Click anywhere to see the a
-          visual representation of a BFS. More to come soon! (Works best on
-          larger screens)
-        </Col>
-      </Row>
-      <Row style={{ height: "100%" }}>{displayMap}</Row>
-    </Container>
+    <>
+      <Container className="p-6 mb-6" style={{ height: "85vh" }}>
+        <Row>
+          <Col>
+            This is a BFS example I made in React. Click anywhere to see the a
+            visual representation of a BFS. More to come soon! (Works best on
+            larger screens)
+          </Col>
+        </Row>
+        <Row style={{ height: "100%" }}>{displayMap}</Row>
+      </Container>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+    </>
   );
 };
 

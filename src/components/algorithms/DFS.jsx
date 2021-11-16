@@ -87,17 +87,17 @@ const BFS = () => {
               : "purple",
         }}
         key={i + ":" + graphState[i][i]}
-        className="p-1"
+        className="p-0"
         onClick={() => dfs({ row: getRow(i), col: getCol(i) })}
       ></Col>
     );
   });
 
   function getRow(i) {
-    return Math.floor(i / 12);
+    return Math.floor(i / width);
   }
   function getCol(i) {
-    return i % 12;
+    return i % width;
   }
   function getI(row, col) {
     return row * height + col;
@@ -112,16 +112,23 @@ const BFS = () => {
   }
 
   return (
-    <Container className="p-3" style={{ height: "85vh" }}>
-      <Row>
-        <Col>
-          This is a DFS example I made in React. Click anywhere to see the a
-          visual representation of a DFS. More to come soon! (Works best on
-          larger screens)
-        </Col>
-      </Row>
-      <Row style={{ height: "100%" }}>{displayMap}</Row>
-    </Container>
+    <>
+      <Container className="p-6 mb-6" style={{ height: "85vh" }}>
+        <Row>
+          <Col>
+            This is a DFS example I made in React. Click anywhere to see the a
+            visual representation of a DFS. More to come soon! (Works best on
+            larger screens)
+          </Col>
+        </Row>
+        <Row style={{ height: "100%" }}>{displayMap}</Row>
+      </Container>{" "}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+    </>
   );
 };
 
