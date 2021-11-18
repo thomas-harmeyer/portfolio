@@ -1,6 +1,7 @@
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
 import { useState, useEffect, useRef } from "react";
 const BFS = () => {
   //dimensions
@@ -141,15 +142,21 @@ const BFS = () => {
   return (
     <>
       <Container className="p-6 mb-6" style={{ height: "85vh" }}>
-        <Row>
+        <Row className="p-2">
           <Col>
-            This is a BFS example I made in React. Click anywhere to see the a
-            visual representation of a BFS. More to come soon! (Works best on
-            larger screens)
+            <Card>
+              <Card.Body>
+                This is a BFS example I made in React. Click anywhere to see the
+                a visual representation of a BFS. More to come soon! (Works best
+                on larger screens)
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
         <Row style={{ height: "100%" }}>{displayMap}</Row>
       </Container>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>
