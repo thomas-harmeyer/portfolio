@@ -5,15 +5,20 @@ import Row from "react-bootstrap/Row";
 const BottomBar = () => {
   return (
     <footer>
-      <Navbar bg="dark" sticky="bottom" variant="dark">
-        <Container className="justify-content-md-center m-3">
+      <Container fluid className="p-0">
+        <Navbar
+          bg="dark"
+          sticky="bottom"
+          variant="dark"
+          className="justify-content-md-center"
+        >
           <Row className="m-2">
             <Col>Thomas Harmeyer</Col>
             <Col>thomasmharmeyer@gmail.com</Col>
             <Col>262-444-2422</Col>
           </Row>
-        </Container>
-      </Navbar>
+        </Navbar>
+      </Container>
     </footer>
   );
 };
