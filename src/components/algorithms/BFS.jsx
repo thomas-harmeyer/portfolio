@@ -145,6 +145,9 @@ const BFS = () => {
         <Row className="p-2">
           <Col>
             <Card>
+              <Card.Header>
+                <Card.Title>Breadth First Search</Card.Title>
+              </Card.Header>
               <Card.Body>
                 This is a BFS example I made in React. Click anywhere to see the
                 a visual representation of a BFS. More to come soon! (Works best
@@ -155,6 +158,9 @@ const BFS = () => {
         </Row>
         <Row style={{ height: "100%" }}>{displayMap}</Row>
       </Container>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>

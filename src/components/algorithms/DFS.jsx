@@ -119,6 +119,9 @@ const BFS = () => {
         <Row className="p-2">
           <Col>
             <Card>
+              <Card.Header>
+                <Card.Title>Depth First Search</Card.Title>
+              </Card.Header>
               <Card.Body>
                 This is a DFS example I made in React. Click anywhere to see the
                 a visual representation of a DFS. More to come soon! (Works best
@@ -129,6 +132,9 @@ const BFS = () => {
         </Row>
         <Row style={{ height: "100%" }}>{displayMap}</Row>
       </Container>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>
