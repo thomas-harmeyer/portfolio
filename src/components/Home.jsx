@@ -52,7 +52,7 @@ const Home = () => {
               responsive communications through the use of Socket.io and react.
             </h3>
             <Button href="https://github.com/thomas-harmeyer/avalonNew">
-              Check my one of my projects on GitHub
+              Check out one of my projects on GitHub
             </Button>
           </Col>
           <Col>
@@ -74,7 +74,7 @@ const Home = () => {
               as a programmer.
             </h3>
             <Button href="https://codeforces.com/profile/TimmyThinMints">
-              Check out my CodeForces Profile.
+              Check out my CodeForces Profile
             </Button>
           </Col>
         </Row>
