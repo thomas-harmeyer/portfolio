@@ -2,9 +2,9 @@ import "./App.css";
 import About from "./components/Projects";
 import Home from "./components/Home";
 import {
-  BrowserRouter as Switch,
+  BrowserRouter as Router,
+  Routes,
   Route,
-  BrowserRouter,
 } from "react-router-dom";
 import TopBar from "./components/TopBar";
 import Container from "react-bootstrap/esm/Container";
@@ -13,28 +13,20 @@ import BFS from "./components/algorithms/BFS";
 import DFS from "./components/algorithms/DFS";
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div>
         <TopBar />
         <Container fluid className="">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/algorithms/bfs">
-              <BFS />
-            </Route>
-            <Route path="/algorithms/dfs">
-              <DFS />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/algorithms/bfs" element={<BFS />} />
+            <Route path="/algorithms/dfs" element={<DFS />} />
+          </Routes>
         </Container>
         <BottomBar />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
