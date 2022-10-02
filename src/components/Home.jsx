@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import PersonalPic from "../IMG_0941.JPG";
+import PersonalPic from "../IMG_0941.jpg";
 import UCFLogo from "../UCFLogo.png";
 import GithubLogo from "../GithubLogo.png";
 import CodeForcesLogo from "../CodeForcesLogo.png";
