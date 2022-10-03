@@ -27,7 +27,7 @@ const Home = () => {
       </Row>
       <hr />
       <Row className="p-1 mb-1">
-        <Col auto>
+        <Col auto={6}>
           <Image fluid src={UCFLogo} />
         </Col>
         <Col>

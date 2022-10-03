@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 // Importing the Bootstrap CSS
 import "bootswatch/dist/pulse/bootstrap.min.css";
