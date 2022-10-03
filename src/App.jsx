@@ -7,10 +7,6 @@ import Container from "react-bootstrap/esm/Container";
 import BottomBar from "./components/BottomBar";
 import BFS from "./components/algorithms/BFS";
 import DFS from "./components/algorithms/DFS";
-import ReactGA from "react-ga";
-ReactGA.initialize("G-353FEKHY1Q");
-ReactGA.pageview(window.location.pathname + window.location.search);
-console.log(window.location.pathname + window.location.search);
 function App() {
   return (
     <Router>
